@@ -1,0 +1,39 @@
+/* Category.module.css */
+
+.sliderContainer {
+    margin: 0 -0.5rem; /* Offset the padding to keep the container aligned */
+}
+
+.slickSlide {
+    padding: 0 0.5rem; /* 1rem gap between cards (0.5rem on each side) */
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    box-sizing: border-box;
+}
+
+.textBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}

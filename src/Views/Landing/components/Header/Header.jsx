@@ -71,11 +71,7 @@ const Header = () => {
   };
   const menuItems = [
     { label: "Home", route: "/" },
-    { label: "Find Products", route: "/tyre-details" },
-    { label: "Deck", route: "/deck" },
-    { label: "Rims", route: "/rims" },
-
-    { label: "Customer Service", route: "/customer-service" },
+    { label: "Lab Tests", route: "/" },
   ];
 const handleHome = ()=>{
   navigate('/')
@@ -93,7 +89,7 @@ const handleHome = ()=>{
       <FlexBox sx={{ gap: "1rem" }}>
         <Box onClick={handleHome} sx={{cursor:'pointer'}}>
 
-        <Image src="/Vector.png" />
+        <Image src="/logo.png" width={'70%'} />
         </Box>
         
       </FlexBox>
@@ -124,128 +120,9 @@ const handleHome = ()=>{
             {item.label}
           </Typography>
         ))}
-        <Btn
-          variant="outlined"
-          sx={{
-            textTransform: "none",
-            borderColor: "black",
-            color: "black",
-            borderRadius: "0px",
-            fontSize: "0.8rem",
-          }}
-          size="small"
-        >
-          My Account
-        </Btn>
       </Box>
 
-      <FlexBox sx={{ display: { xs: "none", sm: "flex", gap: "1rem" } }}>
-        <CiSearch style={{ fontSize: "1.5rem" }} />
-        <IoCartOutline style={{ fontSize: "1.5rem" }} />
-
-        <Btn
-          onClick={handleLogin}
-          variant="contained"
-          sx={{
-            color: "white",
-            textTransform: "none",
-            fontSize: "0.9rem",
-          }}
-        >
-          The Checkout
-        </Btn>
-
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-
-            cursor: "pointer",
-          }}
-        >
-          {auth ? (
-            <Box>
-              <FormControl sx={{ padding: 0 }}>
-                <Select
-                  sx={{
-                    outline: "none",
-                    "&:focus": {
-                      outline: "none",
-                    },
-                    "& .MuiOutlinedInput-notchedOutline": {
-                      border: "none",
-                    },
-                  }}
-                  value={selectedValue}
-                  onChange={handleChange}
-                  displayEmpty
-                  inputProps={{ "aria-label": "Select user" }}
-                  style={{ minWidth: "120px", padding: 0 }}
-                  renderValue={(selected) => (
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
-                      <Avatar
-                        alt=""
-                        src=""
-                        sx={{
-                          height: "2rem",
-                          width: "2rem",
-                          marginRight: "8px",
-                        }}
-                      />
-                      <Typography sx={{ fontSize: "1rem" }}> Usama</Typography>
-                    </Box>
-                  )}
-                >
-                  <MenuItem
-                    sx={{ fontSize: "0.8rem" }}
-                    value="My orders"
-                    onClick={() => handleMenuItemClick("My orders")}
-                  >
-                    My orders
-                  </MenuItem>
-
-                  <MenuItem
-                    sx={{ fontSize: "0.8rem" }}
-                    value="assembly workshop"
-                    onClick={() => handleMenuItemClick("assembly workshop")}
-                  >
-                    My Assembly Workshop
-                  </MenuItem>
-
-                  <MenuItem
-                    sx={{ fontSize: "0.8rem" }}
-                    value="customer data"
-                    onClick={() => handleMen.uItemClick("customer data")}
-                  >
-                    Customer Data
-                  </MenuItem>
-
-                  <MenuItem
-                    sx={{ fontSize: "0.8rem" }}
-                    value="Logout"
-                    onClick={() => handleMenuItemClick("Logout")}
-                  >
-                    Logout
-                  </MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-          ) : (
-            <Button
-              // onClick={handleLogin}
-              variant="contained"
-              sx={{
-                backgroundColor: theme.palette.primary.main,
-                padding: "0.5rem 2rem",
-                textTransform: "none",
-                fontSize: "0.9rem",
-              }}
-            >
-              Login
-            </Button>
-          )}
-        </Box>
-      </FlexBox>
+   
 
       <Box sx={{ display: { xs: "flex", sm: "none" } }}>
         <IconButton onClick={handleDrawerOpen}>

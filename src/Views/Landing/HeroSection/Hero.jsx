@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FiArrowUpRight } from "react-icons/fi";
-import Button from '../components/Button/Button';
+import CustomButton from '../components/Button/CustomButton';
 
 
 const Hero = () => {
@@ -24,16 +24,24 @@ const Hero = () => {
 
   return (
     <>
-    <Box sx={{width:'100%' , backgroundColor:'red', overflow:'hidden'}}>
+    <Box sx={{width:'100%' , overflow:'hidden', 
+      
+    }}>
     <Slider {...settings}>
     <Box sx={{
     backgroundImage: 'url(herobg.png)',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    height: '100vh'
+    height: '100vh',
+    //  padding:'0% 10%'
 }}>
-      <Box>
+      <Box sx={{width:isSmallScreen ? "auto": isMediumScreen ? '80%': '60%', height:'100%', 
+      display:'flex',
+       alignItems:'start', 
+       flexDirection:'column', justifyContent:'center',
+         padding:'0% 10%'
+      }}>
         <Typography sx={{
             color:'white', 
             fontSize:isSmallScreen ? "1.5rem": isMediumScreen ? "2rem" : '2.5rem', 
@@ -44,9 +52,10 @@ const Hero = () => {
         </Typography>
         <Typography sx={{
             color:'#17364c', 
-            fontSize:isSmallScreen ? "2.5rem": isMediumScreen ? "3rem" : '4remrem',  
+            fontSize:isSmallScreen ? "2rem": isMediumScreen ? "3rem" : '4rem',  
             fontWeight:600,
-            textTransform:'uppercase'
+            textTransform:'uppercase',
+            marginBottom:'2rem'
         }}>
         Herbs in Every CBD Product
         </Typography>
@@ -54,18 +63,64 @@ const Hero = () => {
             color:'white', 
             fontSize:isSmallScreen ? "0.9rem": isMediumScreen ? "1rem" : '1rem', 
              fontWeight:400,
-            textTransform:'capitalize'
+            textTransform:'capitalize', 
+            marginBottom:'2rem'
+            
         }}>
         Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.
         </Typography>
 
-        <Button/>
+        <CustomButton border={'1px solid white'} backgroundColor={'white'} color={'#17364c'}
+                 hbackgroundColor={'transparent'} hcolor={'white'}/>
       </Box>
       </Box>
       
-      <div>
-        <h3>1</h3>
-      </div>
+      {/* =============================================SECOND========================================================== */}
+      <Box sx={{
+    backgroundImage: 'url(herobg.png)',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    height: '100vh',
+    //  padding:'0% 10%'
+}}>
+      <Box sx={{width:isSmallScreen ? "auto": isMediumScreen ? '80%': '60%', height:'100%', 
+      display:'flex',
+       alignItems:'start', 
+       flexDirection:'column', justifyContent:'center',
+         padding:'0% 10%'
+      }}>
+        <Typography sx={{
+            color:'white', 
+            fontSize:isSmallScreen ? "1.5rem": isMediumScreen ? "2rem" : '2.5rem', 
+            fontWeight:400,
+            textTransform:'uppercase'
+        }}>
+        Finest Organic
+        </Typography>
+        <Typography sx={{
+            color:'#17364c', 
+            fontSize:isSmallScreen ? "2rem": isMediumScreen ? "3rem" : '4rem',  
+            fontWeight:600,
+            textTransform:'uppercase',
+            marginBottom:'2rem'
+        }}>
+        Herbs in Every CBD Product
+        </Typography>
+        <Typography sx={{
+            color:'white', 
+            fontSize:isSmallScreen ? "0.9rem": isMediumScreen ? "1rem" : '1rem', 
+             fontWeight:400,
+            textTransform:'capitalize', 
+            marginBottom:'2rem'
+            
+        }}>
+        Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.
+        </Typography>
+        <CustomButton border={'1px solid white'} backgroundColor={'white'} color={'#17364c'}
+                 hbackgroundColor={'transparent'} hcolor={'white'}/>
+      </Box>
+      </Box>
     </Slider>
     </Box>
     </>
