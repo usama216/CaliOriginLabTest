@@ -91,7 +91,7 @@ const handleHome = ()=>{
 
         <Image src="/logo.png" width={'70%'} />
         </Box>
-        
+
       </FlexBox>
 
       <Box
@@ -122,7 +122,7 @@ const handleHome = ()=>{
         ))}
       </Box>
 
-   
+
 
       <Box sx={{ display: { xs: "flex", sm: "none" } }}>
         <IconButton onClick={handleDrawerOpen}>

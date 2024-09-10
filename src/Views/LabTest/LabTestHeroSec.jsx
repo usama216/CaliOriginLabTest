@@ -1,8 +1,15 @@
+import { Box } from '@mui/material'
 import React from 'react'
+import HeroSection from '../Landing/components/HeroSection'
 
 const LabTestHeroSec = () => {
   return (
-    <div>LabTestHeroSec</div>
+    <>
+    <HeroSection/>
+
+
+
+    </>
   )
 }
 
