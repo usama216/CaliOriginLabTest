@@ -79,7 +79,7 @@ const handleHome = ()=>{
   return (
     <Box
       sx={{
-        padding: "1rem 5%",
+        padding: "0.3rem 5%",
         color: "black",
         display: "flex",
         justifyContent: "space-between",
@@ -109,9 +109,10 @@ const handleHome = ()=>{
               setDrawerOpen(false);
             }}
             sx={{
-              fontSize: "0.9rem",
+              fontSize: "1rem",
               cursor: "pointer",
-              color: "grey",
+              color: "black",
+              fontWeight:'600',
               ":hover": {
                 color: theme.palette.primary.main,
               },
@@ -122,7 +123,9 @@ const handleHome = ()=>{
         ))}
       </Box>
 
-   
+   <Box>
+    {/* empty  */}
+   </Box>
 
       <Box sx={{ display: { xs: "flex", sm: "none" } }}>
         <IconButton onClick={handleDrawerOpen}>
