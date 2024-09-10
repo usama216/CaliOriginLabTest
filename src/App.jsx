@@ -14,7 +14,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <StyledEngineProvider injectFirst>
         <ErrorBoundary>
-
+          <TopHeader/>
           <Header/>
           <Router />
           <Footer/>

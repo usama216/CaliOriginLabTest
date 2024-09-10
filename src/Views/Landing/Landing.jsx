@@ -17,8 +17,8 @@ const Landing = () => {
       <Category/>
       <Video/>
 
-<FounderMessage/>
 <BenefitsofhempProduct/>
+<FounderMessage/>
 
     </Page>
   );
