@@ -17,9 +17,12 @@ const Hero = () => {
     var settings = {
         dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        speed: 3000,
+        autoplaySpeed: 3000,
+        pauseOnHover: false
       };
 
   return (
@@ -71,7 +74,7 @@ const Hero = () => {
         </Typography>
 
         <CustomButton border={'1px solid white'} backgroundColor={'white'} color={'#17364c'}
-                 hbackgroundColor={'transparent'} hcolor={'white'}/>
+                 hbackgroundColor={'transparent'} hcolor={'white'} name="Learn More"/>
       </Box>
       </Box>
       
@@ -118,7 +121,7 @@ const Hero = () => {
         Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.
         </Typography>
         <CustomButton border={'1px solid white'} backgroundColor={'white'} color={'#17364c'}
-                 hbackgroundColor={'transparent'} hcolor={'white'}/>
+                 hbackgroundColor={'transparent'} hcolor={'white'} name="Learn More"/>
       </Box>
       </Box>
     </Slider>

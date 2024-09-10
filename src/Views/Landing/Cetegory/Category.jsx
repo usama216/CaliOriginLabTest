@@ -163,6 +163,7 @@ const Category = () => {
           color={"white"}
           hbackgroundColor={"transparent"}
           hcolor={"#17364c"}
+          name="Learn More"
         />      
       </Box>
     </Box>

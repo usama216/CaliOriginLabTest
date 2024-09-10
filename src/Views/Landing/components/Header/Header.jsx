@@ -71,7 +71,7 @@ const Header = () => {
   };
   const menuItems = [
     { label: "Home", route: "/" },
-    { label: "Lab Tests", route: "/" },
+    { label: "Lab Tests", route: "/lab-tests" },
   ];
 const handleHome = ()=>{
   navigate('/')
@@ -162,7 +162,7 @@ const handleHome = ()=>{
               </Box>
             ))}
             <Box sx={{ marginTop: 2 }}>
-              <Btn
+              {/* <Btn
                 onClick={handleLogin}
                 variant="contained"
                 sx={{
@@ -173,7 +173,7 @@ const handleHome = ()=>{
                 }}
               >
                 The Checkout
-              </Btn>
+              </Btn> */}
             </Box>
           </Box>
         </Drawer>

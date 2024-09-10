@@ -2,7 +2,7 @@ import { Box, Typography, useTheme, useMediaQuery, Button as MuiButton, IconButt
 import React from 'react';
 import { FiArrowUpRight } from "react-icons/fi";
 
-const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor}) => {
+const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor, name, width}) => {
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
     const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -11,6 +11,7 @@ const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor}
     return (
         <>
             <MuiButton sx={{
+                width:`${width}`,
                 textTransform: 'none',
                 backgroundColor: `${backgroundColor}`,
                 padding: isSmallScreen ? "0.5rem 1rem" : '0.5rem 2rem',
@@ -33,7 +34,7 @@ const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor}
                     textTransform: 'capitalize',
                     marginRight: '0.5rem'
                 }}>
-                    Learn more
+                    {name}
                 </Typography>
                 <IconButton  className='icon' sx={{fontSize:isSmallScreen? '1.1rem': '1.4rem',
                      color: `${color}`, backgroundColor:'transparent'}}>

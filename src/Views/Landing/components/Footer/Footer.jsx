@@ -5,12 +5,14 @@ import {
   Grid,
   styled,
   TextField,
-  Typography,
+  Typography, useTheme, useMediaQuery
 } from "@mui/material";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBox from "../../../../components/FlexBox/FlexBox";
 import Image from "../../../../components/Image/Image";
+import CustomButton from "../Button/CustomButton";
+
 
 const StyledFooter = styled(Box)(({ theme }) => ({
   background: "#17364c",
@@ -21,6 +23,10 @@ const StyledFooter = styled(Box)(({ theme }) => ({
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const theme = useTheme();
+    const isLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const currentPath = location.pathname;
 
@@ -80,11 +86,14 @@ const Footer = () => {
           flexDirection: "column",
         }}
       >
-        <Typography sx={{ fontSize: "3rem", fontWeight: 600 }}>
+        <Typography sx={{ fontSize: isSmallScreen ? "2rem": isMediumScreen ? '2.5rem': "3rem",
+           fontWeight: 600 }}>
           Subscribe to NewsLetter
         </Typography>
 
-        <Typography sx={{ fontSize: "1rem" }}>
+        <Typography sx={{ fontSize:isSmallScreen ?"0.9rem" : "1rem"
+
+         }}>
           Join our newsletter to stay in the know about Moody Moon’s new
           products, special offers and CBD education!
         </Typography>
@@ -95,25 +104,13 @@ const Footer = () => {
           gap={2}
         >
           <TextField
-            size="small"
+            // size="small"
             sx={textFieldStyle}
             fullWidth
             placeholder="Input your email address here"
           />
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#f0ab3b",
-              "&:hover": {
-                backgroundColor: "#f0ab3b",
-              },
-              textTransform: "none",
-              width: "15%",
-              borderRadius: "35px",
-            }}
-          >
-            View All{" "}
-          </Button>
+          <CustomButton name='View All' border={'1px solid #f0ab3b'} backgroundColor={'#f0ab3b'} color={'white'}
+                 hbackgroundColor={'transparent'} hcolor={'#f0ab3b'} width={'14rem'}/>
         </Box>
       </FlexBox>
       <br />
