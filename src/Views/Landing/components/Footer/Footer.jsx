@@ -1,33 +1,57 @@
-import { Box, Divider, Grid, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  Grid,
+  styled,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBox from "../../../../components/FlexBox/FlexBox";
 import Image from "../../../../components/Image/Image";
-import Heading from "../../../../components/Text/Heading";
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const StyledFooter = styled(Box)(({ theme }) => ({
-  background: "#272727",
+  background: "#17364c",
   color: "white",
   padding: "2rem 5%",
 }));
 
 const Footer = () => {
   const navigate = useNavigate();
-const location = useLocation()
+  const location = useLocation();
 
+  const currentPath = location.pathname;
 
-const currentPath = location.pathname;
+  const isHidden =
+    currentPath === "/order-confirm" ||
+    currentPath === "/login" ||
+    currentPath === "/sign-up" ||
+    currentPath === "/email-confirmation-otp";
 
-const isHidden =
-currentPath === "/order-confirm" ||
-currentPath === "/login" ||
-currentPath === "/sign-up" ||
-currentPath === "/email-confirmation-otp";
+  if (isHidden) {
+    return null;
+  }
 
-if (isHidden) {
-  return null;
-}
+  const textFieldStyle = {
+    "& .MuiInputBase-root": {
+      border: "none",
+      "&:hover": {
+        borderColor: "white",
+      },
+      "&.Mui-focused": {
+        boxShadow: "none",
+      },
+    },
+    "& .MuiOutlinedInput-notchedOutline": {
+      display: "none",
+    },
+
+    borderRadius: "45px",
+    backgroundColor: "white",
+  };
+
   const pages = [
     { label: "Home", route: "/" },
     { label: "Find Products", route: "/find-products" },
@@ -49,78 +73,85 @@ if (isHidden) {
 
   return (
     <StyledFooter>
-      <Grid container spacing={5}>
-        <Grid item lg={3} sm={6} xs={12}>
-          <FlexBox sx={{ gap: "1rem" }}>
-            <Image src="/Vector.png" />
-            <Heading sx={{ fontSize: "1.3rem" }}>Your Logo</Heading>
-          </FlexBox>
-          <Typography sx={{ fontSize: "0.9rem", mt: 3 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit.
-          </Typography>
-          <FlexBox sx={{ gap: "1rem", mt: 3 }}>
-            <FaFacebook /> <FaTwitter /> <FaLinkedin />
-          </FlexBox>
-        </Grid>
+      <FlexBox
+        sx={{
+          justifyContent: "center",
+          color: "white",
+          flexDirection: "column",
+        }}
+      >
+        <Typography sx={{ fontSize: "3rem", fontWeight: 600 }}>
+          Subscribe to NewsLetter
+        </Typography>
 
-        <Grid item lg={3} sm={6} xs={12}>
-          <Heading sx={{ fontSize: "1.2rem" }}>Pages</Heading>
-          {pages.map((page, idx) => (
-            <Typography
-              key={idx}
-              sx={{
-                mt: idx === 0 ? 3 : 2,
-                cursor: "pointer",
-                fontSize: "0.9rem",
-              }}
-              onClick={() => navigate(page.route)}
-            >
-              {page.label}
-            </Typography>
-          ))}
-        </Grid>
-
-        <Grid item lg={3} sm={6} xs={12}>
-          <Heading sx={{ fontSize: "1.2rem" }}>Customer Services</Heading>
-          {services.map((service, idx) => (
-            <Typography
-              key={idx}
-              sx={{
-                mt: idx === 0 ? 3 : 2,
-                cursor: "pointer",
-                fontSize: "0.9rem",
-              }}
-              onClick={() => navigate(service.route)}
-            >
-              {service.label}
-            </Typography>
-          ))}
-        </Grid>
-
-        <Grid item lg={3} sm={6} xs={12}>
-          <Heading sx={{ fontSize: "1.2rem" }}>Contact Us</Heading>
-          <Typography sx={{ mt: 3, fontSize: "0.9rem", mb: 2 }}>
-            +92-300-0000000
-          </Typography>
-          <Typography sx={{ fontSize: "0.9rem", mb: 2 }}>
-            info@saeedantechpvt.com
-          </Typography>
-          <Typography sx={{ fontSize: "0.9rem", mb: 2 }}>
-            92, Expertsystems, Lahore
-          </Typography>
-        </Grid>
-      </Grid>
+        <Typography sx={{ fontSize: "1rem" }}>
+          Join our newsletter to stay in the know about Moody Moon’s new
+          products, special offers and CBD education!
+        </Typography>
+        <br />
+        <br />
+        <Box
+          sx={{ display: "flex", alignItems: "center", width: "70%" }}
+          gap={2}
+        >
+          <TextField
+            size="small"
+            sx={textFieldStyle}
+            fullWidth
+            placeholder="Input your email address here"
+          />
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#f0ab3b",
+              "&:hover": {
+                backgroundColor: "#f0ab3b",
+              },
+              textTransform: "none",
+              width: "15%",
+              borderRadius: "35px",
+            }}
+          >
+            View All{" "}
+          </Button>
+        </Box>
+      </FlexBox>
       <br />
       <Divider sx={{ backgroundColor: "white" }} />
       <br />
 
-      <FlexBox sx={{ justifyContent: "center" }}>
-        <Typography sx={{ fontSize: "0.7rem" }}>
-          Copyright Dibdaa 2023 All rights reserved.
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Typography sx={{ fontSize: "0.9rem", color: "white" }}>
+          Copyright © 2024 Cali Origins. All Rights Reserved.
         </Typography>
-      </FlexBox>
+
+        <Box
+          sx={{ dispaly: "flex", alignItems: "center", justifyContent: "end" }}
+        >
+          <Image
+            src="/footercard1.svg"
+            width="13%"
+            sx={{ marginRight: "1rem" }}
+          />
+          <Image
+            src="/footercard2.svg"
+            width="13%"
+            sx={{ marginRight: "1rem" }}
+          />
+          <Image
+            src="/footercard3.svg"
+            width="13%"
+            sx={{ marginRight: "1rem" }}
+          />
+          <Image src="/footercard4.svg" width="13%" />
+        </Box>
+      </Box>
     </StyledFooter>
   );
 };
