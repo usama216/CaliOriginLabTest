@@ -1,18 +1,19 @@
 /* Category.module.css */
 
-.sliderContainer {
-    margin: 0 -0.5rem; /* Offset the padding to keep the container aligned */
+/* .sliderContainer {
+    margin: 0 -0.5rem; 
 }
 
 .slickSlide {
-    padding: 0 0.5rem; /* 1rem gap between cards (0.5rem on each side) */
-}
+    padding: 0 0.5rem; 
+} */
 
 .cardImage {
-    width: 100%;
+    width: 98%;
     height: auto;
     display: block;
     border-radius: 10px;
+    margin-right: 5rem;
 }
 
 .overlay {
@@ -37,3 +38,9 @@
     padding: 10px;
     /* background-color: rgba(0, 0, 0, 0.5); */
 }
+ @media (max-width:600px){
+    .cardImage {
+        width: 100%;
+       
+    }
+ }

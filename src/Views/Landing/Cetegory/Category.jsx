@@ -97,7 +97,8 @@ const Category = () => {
         <div className={styles.sliderContainer}>
           <Slider {...settings}>
             {listData.map((row, index) => (
-              <Box
+             <Box sx={{marginRight:'5rem'}}>
+               <Box
                 key={index}
                 className={styles.slickSlide} // Apply CSS Module class
                 sx={{
@@ -106,6 +107,7 @@ const Category = () => {
                   height: "auto",
                   borderRadius: "10px",
                   overflow: "hidden",
+                  marginRight:'4rem'
                 }}
               >
                 <img
@@ -144,6 +146,7 @@ const Category = () => {
                   </Box>
                 </Box>
               </Box>
+             </Box>
             ))}
           </Slider>
         </div>
