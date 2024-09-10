@@ -1,14 +1,17 @@
-import { Box, Typography, useTheme, useMediaQuery } from '@mui/material'
+import { Box, Typography, useTheme, useMediaQuery, IconButton } from '@mui/material'
 import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { FiArrowUpRight } from "react-icons/fi";
+import Button from '../components/Button/Button';
+
 
 const Hero = () => {
     const theme = useTheme();
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
-    const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
-    const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
+    const isLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
     
     var settings = {
@@ -33,28 +36,33 @@ const Hero = () => {
       <Box>
         <Typography sx={{
             color:'white', 
-            fontSize:'2.5rem', fontWeight:400,
+            fontSize:isSmallScreen ? "1.5rem": isMediumScreen ? "2rem" : '2.5rem', 
+            fontWeight:400,
             textTransform:'uppercase'
         }}>
         Finest Organic
         </Typography>
         <Typography sx={{
             color:'#17364c', 
-            fontSize:'2.5rem', fontWeight:600,
+            fontSize:isSmallScreen ? "2.5rem": isMediumScreen ? "3rem" : '4remrem',  
+            fontWeight:600,
             textTransform:'uppercase'
         }}>
         Herbs in Every CBD Product
         </Typography>
         <Typography sx={{
-            color:'#17364c', 
-            fontSize:'1rem', fontWeight:400,
-            textTransform:'uppercase'
+            color:'white', 
+            fontSize:isSmallScreen ? "0.9rem": isMediumScreen ? "1rem" : '1rem', 
+             fontWeight:400,
+            textTransform:'capitalize'
         }}>
         Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.
         </Typography>
+
+        <Button/>
       </Box>
-        {/* <img src="/herobg.png" alt="" style={{width:'100%', height:'100%'}}/> */}
       </Box>
+      
       <div>
         <h3>1</h3>
       </div>
