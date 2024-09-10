@@ -19,7 +19,7 @@ const LabTestPDFMain = () => {
     <Box sx={{ padding: "3rem 5%" }}>
       <Grid container spacing={3}>
         {pdfs.map((pdf, index) => (
-          <Grid item lg={4} md={4} sm={12} xs={12} key={index}>
+          <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
             <Box
               sx={{
                 backgroundColor: "#17364c",
