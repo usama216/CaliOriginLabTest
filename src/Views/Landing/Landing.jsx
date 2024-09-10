@@ -1,6 +1,8 @@
 import React from "react";
 import Page from "../../components/page";
 import HeroSection from "./components/HeroSection";
+import FounderMessage from "./components/FounderMessage";
+import BenefitsofhempProduct from "./components/BenefitsofhempProduct";
 
 const Landing = () => {
   return (
@@ -8,7 +10,8 @@ const Landing = () => {
 
 
       <HeroSection/>
-
+<FounderMessage/>
+<BenefitsofhempProduct/>
 
     </Page>
   );
