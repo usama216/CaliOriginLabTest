@@ -20,16 +20,16 @@ const Category = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     autoPlay: true,
     pauseOnHover: false,
     slidesToShow: 4,
-    autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 3000,
-    pauseOnHover: false,
+    // autoplay: true,
+    // speed: 3000,
+    // autoplaySpeed: 3000,
+    // pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1200,

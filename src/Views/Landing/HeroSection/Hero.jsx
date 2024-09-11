@@ -19,10 +19,10 @@ const Hero = () => {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        speed: 3000,
-        autoplaySpeed: 3000,
-        pauseOnHover: false
+        // autoplay: true,
+        // speed: 3000,
+        // autoplaySpeed: 3000,
+        // pauseOnHover: false
       };
 
   return (
@@ -30,7 +30,7 @@ const Hero = () => {
     <Box sx={{width:'100%' , overflow:'hidden', 
       
     }}>
-    <Slider {...settings}>
+    {/* <Slider {...settings}> */}
     <Box sx={{
     backgroundImage: 'url(herobg.png)',
     backgroundPosition: 'center',
@@ -60,14 +60,17 @@ const Hero = () => {
             textTransform:'uppercase',
             marginBottom:'2rem'
         }}>
-        Herbs in Every CBD Product
+        Herbs in Every CBD 
+        <br />
+        Product
         </Typography>
         <Typography sx={{
             color:'white', 
             fontSize:isSmallScreen ? "1rem": isMediumScreen ? "1.2rem" : '1.4rem', 
              fontWeight:400,
             textTransform:'capitalize', 
-            marginBottom:'2rem'
+            marginBottom:'2rem', 
+            width:isSmallScreen ? "100%": isMediumScreen ?  "80%": '65%',
             
         }}>
         Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.
@@ -79,7 +82,7 @@ const Hero = () => {
       </Box>
       
       {/* =============================================SECOND========================================================== */}
-      <Box sx={{
+      {/* <Box sx={{
     backgroundImage: 'url(herobg.png)',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -123,8 +126,8 @@ const Hero = () => {
         <CustomButton border={'1px solid white'} backgroundColor={'white'} color={'#17364c'}
                  hbackgroundColor={'transparent'} hcolor={'white'} name="Learn More"/>
       </Box>
-      </Box>
-    </Slider>
+      </Box> */}
+    {/* </Slider> */}
     </Box>
     </>
   )
