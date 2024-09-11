@@ -1,8 +1,12 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme, useMediaQuery, } from "@mui/material";
 import React from "react";
 import Image from "../../../components/Image/Image";
 
 const FounderMessage = () => {
+  const theme = useTheme();
+  const isLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <Box sx={{ padding: "3rem 5%" }}>
@@ -14,11 +18,12 @@ const FounderMessage = () => {
           </Grid>
 
           <Grid item lg={7} md={7} sm={12} xs={12}>
-            <Typography sx={{ fontSize: "2rem", fontWeight: 700 }}>
+            <Typography sx={{ fontSize:isSmallScreen ? '1.3rem': isMediumScreen ? '1.8rem' : "2rem",
+              fontWeight: 700 }}>
               Founder Message
             </Typography>
             <br />
-            <Typography>
+            <Typography sx={{ fontSize:isSmallScreen ? '0.9rem': "1rem", }}>
               Cali Origins a Holistic Approach to Wellness is the creation of
               our visionary founder, Minhaz Mitha, a dedicated healthcare
               professional with a passion for natural wellness. Inspired by his
@@ -31,7 +36,7 @@ const FounderMessage = () => {
             </Typography>
             <br />
 
-            <Typography>
+            <Typography sx={{ fontSize:isSmallScreen ? '0.9rem': "1rem", }}>
             I'm proud to introduce Cali Origin, a brand dedicated to
               providing natural, effective products to the people of California
               set out to develop a line of natural products that harness the

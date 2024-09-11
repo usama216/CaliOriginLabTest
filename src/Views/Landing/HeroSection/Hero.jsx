@@ -36,7 +36,7 @@ const Hero = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    height: '100vh',
+    height:isSmallScreen ? "50vh": '100vh',
     //  padding:'0% 10%'
 }}>
       <Box sx={{width:isSmallScreen ? "auto": isMediumScreen ? '80%': '60%', height:'100%', 
@@ -84,7 +84,7 @@ const Hero = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    height: '100vh',
+    height:isSmallScreen ? "50vh": '100vh',
     //  padding:'0% 10%'
 }}>
       <Box sx={{width:isSmallScreen ? "auto": isMediumScreen ? '80%': '60%', height:'100%', 
