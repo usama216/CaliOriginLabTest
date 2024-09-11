@@ -4,7 +4,7 @@ import React from 'react'
 const Video = () => {
   return (
    <>
-   <Box sx={{padding:'0% 10%', marginTop:'5rem'}} >
+   <Box sx={{padding:'0% 5%', marginTop:'5rem'}} >
     <Box sx={{
         display:'flex', justifyContent:'center',
         

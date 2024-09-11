@@ -14,7 +14,12 @@ const BenefitsofhempProduct = () => {
       <Box sx={{ padding: "2rem 5%", backgroundColor: "#f7dba9" , marginTop:'5rem'}}>
         <Grid container spacing={4}>
           <Grid item lg={6} md={6} sm={12} xs={12}>
-            <Box>
+            <Box sx={{
+              display:'flex',
+              flexDirection:'column',
+              justifyContent:'center', 
+              height:'100%'
+            }}>
               <Typography sx={{ fontSize: "2rem", fontWeight: 700 }}>
                 Benefits Of Hemp Products
               </Typography>

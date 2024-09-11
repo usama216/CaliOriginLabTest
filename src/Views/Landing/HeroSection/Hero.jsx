@@ -43,7 +43,7 @@ const Hero = () => {
       display:'flex',
        alignItems:'start', 
        flexDirection:'column', justifyContent:'center',
-         padding:'0% 10%'
+         padding:'0% 5%'
       }}>
         <Typography sx={{
             color:'white', 
@@ -64,7 +64,7 @@ const Hero = () => {
         </Typography>
         <Typography sx={{
             color:'white', 
-            fontSize:isSmallScreen ? "0.9rem": isMediumScreen ? "1rem" : '1rem', 
+            fontSize:isSmallScreen ? "1rem": isMediumScreen ? "1.2rem" : '1.4rem', 
              fontWeight:400,
             textTransform:'capitalize', 
             marginBottom:'2rem'
@@ -91,7 +91,7 @@ const Hero = () => {
       display:'flex',
        alignItems:'start', 
        flexDirection:'column', justifyContent:'center',
-         padding:'0% 10%'
+         padding:'0% 5%'
       }}>
         <Typography sx={{
             color:'white', 

@@ -26,6 +26,10 @@ const Category = () => {
     autoPlay: true,
     pauseOnHover: false,
     slidesToShow: 4,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1200,
@@ -75,7 +79,7 @@ const Category = () => {
   ];
 
   return (
-    <Box sx={{ padding: "0% 10%", marginTop: "4rem" }}>
+    <Box sx={{ padding: "0% 5%", marginTop: "4rem" }}>
       <Box>
         <Typography
           sx={{
@@ -86,7 +90,7 @@ const Category = () => {
               ? "2.5rem"
               : "3rem",
             fontWeight: 600,
-            textTransform: "uppercase",
+            textTransform: "capitalize",
             marginBottom: "2rem",
           }}
         >

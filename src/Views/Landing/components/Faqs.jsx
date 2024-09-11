@@ -14,12 +14,12 @@ const Faqs = () => {
   };
 
   const faqsData = [
-    { question: "What are your help desk hours?", answer: "Our help desk is available 24/7 to assist you with any IT issues." },
-    { question: "What is your response time? ", answer: " We make sure to respond as soon as possible. We strive to respond to all support requests within 24 hours." },
-    { question: "What is the typical contract length?", answer: "Our contracts are typically customized to meet client needs, but average contract lengths range from six to twelve months." },
-    { question: "How do you price your services?", answer: "Yes, we provide comprehensive penetration testing services to identify vulnerabilities in your systems." },
-    { question: "How do you ensure the security of my data?", answer: "We employ industry-leading security measures, including encryption, firewalls, and regular security audits." },
-    { question: "How do you help with data privacy compliance (GDPR, CCPA, etc.)? ", answer: "We assist with compliance by providing expert guidance and implementing necessary measures." }
+    { question: "Nutritional Powerhouse", answer: "Hemp seeds are packed with essential nutrients like protein, fiber, healthy fats, and vitamins. They offer a complete plant-based protein source and essential fatty acids to support overall health." },
+    { question: "Digestive Health", answer: "The fiber content in hemp seeds promotes digestive health. They can help regulate bowel movements, alleviate constipation, and support a healthy gut microbiome." },
+    { question: "Balanced Plant-Based Protein", answer: "Hemp protein is a complete protein, containing all nine essential amino acids. It provides a balanced plant-based protein source for muscle repair, growth, and overall well-being." },
+    { question: "Anti-inflammatory Properties", answer: "Hemp seeds are rich in omega-3 fatty acids, which have anti-inflammatory properties. These fatty acids can help reduce inflammation in the body, which is linked to various health conditions." },
+    { question: "Mood & Stress Regulation", answer: "Hemp seeds contain compounds that may help regulate mood and reduce stress. They can contribute to a sense of calm and well-being, promoting overall mental health" },
+    // { question: "How do you help with data privacy compliance (GDPR, CCPA, etc.)? ", answer: "We assist with compliance by providing expert guidance and implementing necessary measures." }
   ];
 
   return (
