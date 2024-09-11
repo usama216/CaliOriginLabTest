@@ -11,13 +11,16 @@ const FounderMessage = () => {
     <>
       <Box sx={{ padding: "3rem 5%" }}>
         <Grid container spacing={4} sx={{ alignItems: "center" }}>
-          <Grid item lg={4} md={4} sm={12} xs={12}>
-            <Box>
-              <img src="/shayamal.svg" width="100%" height={"400rem"} />
-            </Box>
+          <Grid item lg={3.5} md={3.5} sm={12} xs={12} sx={{display:'flex'}}>
+            {/* <Box sx={{
+              width:'100%', display:'flex',
+              justifyContent:'start'
+            }}> */}
+              <img src="/shayamal2.svg" width="100%" height={"400rem"} text-align={'start'} />
+            {/* </Box> */}
           </Grid>
 
-          <Grid item lg={7} md={7} sm={12} xs={12}>
+          <Grid item lg={7.5} md={7.5} sm={12} xs={12}>
             <Typography sx={{ fontSize:isSmallScreen ? '1.3rem': isMediumScreen ? '1.8rem' : "2rem",
               fontWeight: 700 }}>
               Founder Message

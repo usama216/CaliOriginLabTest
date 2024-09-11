@@ -58,10 +58,17 @@ const Hero = () => {
             fontSize:isSmallScreen ? "2rem": isMediumScreen ? "3rem" : '4rem',  
             fontWeight:600,
             textTransform:'uppercase',
+            marginBottom:'-0.5rem'
+        }}>
+          Herbs in Every CBD 
+        </Typography>
+        <Typography sx={{
+            color:'#17364c', 
+            fontSize:isSmallScreen ? "2rem": isMediumScreen ? "3rem" : '4rem',  
+            fontWeight:600,
+            textTransform:'uppercase',
             marginBottom:'2rem'
         }}>
-        Herbs in Every CBD 
-        <br />
         Product
         </Typography>
         <Typography sx={{
