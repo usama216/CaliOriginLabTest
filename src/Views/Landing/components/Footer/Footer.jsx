@@ -94,7 +94,7 @@ const Footer = () => {
         <Typography sx={{ fontSize:isSmallScreen ?"0.9rem" : "1rem"
 
          }}>
-          Join our newsletter to stay in the know about Moody Moon’s new
+          Join our newsletter to stay in the know about Cali Origin's new
           products, special offers and CBD education!
         </Typography>
         <br />
