@@ -6,6 +6,7 @@ import Category from "./Cetegory/Category";
 import Video from "./Video/Video";
 import FounderMessage from "./components/FounderMessage";
 import BenefitsofhempProduct from "./components/BenefitsofhempProduct";
+import ProductSample from "./ProductSample/ProductSample";
 
 const Landing = () => {
   return (
@@ -14,10 +15,11 @@ const Landing = () => {
 
       {/* <HeroSection/> */}
       <Hero/>
-      <Category/>
+      {/* <Category/> */}
       <Video/>
+      <ProductSample/>
 
-<BenefitsofhempProduct/>
+{/* <BenefitsofhempProduct/> */}
 {/* <FounderMessage/> */}
 
     </Page>

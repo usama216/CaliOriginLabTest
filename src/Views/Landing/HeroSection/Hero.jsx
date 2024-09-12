@@ -36,14 +36,14 @@ const Hero = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    height:isSmallScreen ? "50vh": '100vh',
+    minHeight:isSmallScreen ? "50vh": 'auto',
     //  padding:'0% 10%'
 }}>
       <Box sx={{width:isSmallScreen ? "auto": isMediumScreen ? '80%': '60%', height:'100%', 
       display:'flex',
        alignItems:'start', 
        flexDirection:'column', justifyContent:'center',
-         padding:'0% 5%'
+         padding:'7% 5%'
       }}>
         <Typography sx={{
             color:'white', 
@@ -85,6 +85,12 @@ const Hero = () => {
 
         <CustomButton border={'1px solid white'} backgroundColor={'white'} color={'#17364c'}
                  hbackgroundColor={'transparent'} hcolor={'white'} name="Learn More"/>
+
+                 <Box sx={{
+                  marginTop:isMediumScreen ? "2rem": isMediumScreen ? "3rem ": '4rem'
+                 }}>
+                  <img src="/heroimg.png" alt=""  width={isMediumScreen ? "50%": isMediumScreen ? "60%": '70%'}/>
+                 </Box>
       </Box>
       </Box>
       
