@@ -118,7 +118,7 @@ const Footer = () => {
         <Typography
           sx={{
             fontSize: isSmallScreen
-              ? "2rem"
+              ? "1.6rem"
               : isMediumScreen
               ? "2.5rem"
               : "3rem",

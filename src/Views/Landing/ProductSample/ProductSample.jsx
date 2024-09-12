@@ -13,10 +13,11 @@ const ProductSample = () => {
   const isLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const is1200 = useMediaQuery("(max-width:1200px)");
 
   const listData = [
     {img:'benefit1.png' , title :'Best Herbs',
-        des:'Cali Origins only uses the finest organic herbs and extracts in our line of CBD products.'
+        des:'Cali Origins only uses the finest organic herbs and extracts in our line of premium selection of CBD products '
     },
     {img:'benefit2.png' , title :'Best Products',
         des:'Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.'
@@ -40,13 +41,14 @@ const ProductSample = () => {
     }}> 
         <Grid container spacing={isSmallScreen ? 2: 2}>
             {listData.map((row, index)=>(
-        <Grid item lg={6} md={6} sm={12} sx={12} >
+        <Grid item lg={6} md={6} sm={12} xs={12} >
   <Box sx={{ backgroundColor:'#6d6c6c6a', 
-    display:'flex', padding:'2rem', borderRadius:'10px', gap: isSmallScreen ?2 :5
+  // height:"8rem",
+    display:'flex', padding:'2rem', borderRadius:'10px', gap: isSmallScreen ?2 : is1200 ? 2: 5
   }}>
      <Box>
         <img src={row.img} alt="" style={{
-            width:isSmallScreen ? "3rem" : isMediumScreen ? "5rem":  '6rem'
+            width:isSmallScreen ? "3rem" : isMediumScreen ?  "5rem": is1200 ? "4rem":  '6rem'
             }}/>
      </Box>
      <Box>
