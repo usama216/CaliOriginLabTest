@@ -16,16 +16,16 @@ const ProductSample = () => {
 
   const listData = [
     {img:'benefit1.png' , title :'Best Herbs',
-        des:'Moody Moon only uses the finest organic herbs and extracts in our line of CBD products.'
+        des:'Cali Origins only uses the finest organic herbs and extracts in our line of CBD products.'
     },
     {img:'benefit2.png' , title :'Best Products',
-        des:'Moody Moon has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.'
+        des:'Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.'
     },
     {img:'benefit3.png' , title :'Good Quality',
         des:'Our premier CBD products offer good quality and consistency you can always count on, each time you order.'
     },
     {img:'benefit4.png' , title :'Best Price',
-        des:'Moody Moon ensures top-notch CBD products at the best prices, staying true to our commitment to excellence.'
+        des:'Cali Origins ensures top-notch CBD products at the best prices, staying true to our commitment to excellence.'
     },
   ]
   return (

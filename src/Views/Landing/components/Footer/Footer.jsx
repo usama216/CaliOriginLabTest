@@ -129,8 +129,8 @@ const Footer = () => {
         </Typography>
 
         <Typography sx={{ fontSize: isSmallScreen ? "0.9rem" : "1rem", textAlign:'center' }}>
-          Join our newsletter to stay in the know about Cali origin’s new
-          products, special offers and CBD education!
+        Join our newsletter to stay in the know about Cali Origins new products, special offers and
+        CBD education!
         </Typography>
         <br />
         <br />
@@ -200,7 +200,7 @@ const Footer = () => {
         }}
       >
         <Typography sx={{ fontSize: "0.9rem", color: "white" }}>
-          Copyright © 2024 Cali Origins. All Rights Reserved.
+        Copyright © 2024 Cali Origins. All Rights Reserved.
         </Typography>
 
         <Box
