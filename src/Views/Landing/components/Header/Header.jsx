@@ -84,6 +84,7 @@ const handleHome = ()=>{
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        
       }}
     >
       <FlexBox sx={{ gap: "1rem" }}>

@@ -25,7 +25,7 @@ const ProductSample = () => {
         des:'Our premier CBD products offer good quality and consistency you can always count on, each time you order.'
     },
     {img:'benefit4.png' , title :'Best Price',
-        des:'Cali Origins ensures top-notch CBD products at the best prices, staying true to our commitment to excellence.'
+        des:'Cali Origins ensures top-notch CBD products at the best prices, staying true to our commitment to excellence.  '
     },
   ]
   return (
@@ -38,11 +38,11 @@ const ProductSample = () => {
         padding: isMediumScreen ? "5%":  '5% 15%',
         marginTop:isSmallScreen ? "2rem" : isMediumScreen ? "4rem":  '5rem'
     }}> 
-        <Grid container spacing={2}>
+        <Grid container spacing={isSmallScreen ? 2: 2}>
             {listData.map((row, index)=>(
         <Grid item lg={6} md={6} sm={12} sx={12} >
   <Box sx={{ backgroundColor:'#6d6c6c6a', 
-    display:'flex', padding:'2rem', borderRadius:'10px', gap:5
+    display:'flex', padding:'2rem', borderRadius:'10px', gap: isSmallScreen ?2 :5
   }}>
      <Box>
         <img src={row.img} alt="" style={{

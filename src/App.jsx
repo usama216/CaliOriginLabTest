@@ -15,7 +15,7 @@ function App() {
       <StyledEngineProvider injectFirst>
         <ErrorBoundary>
           <TopHeader/>
-          <Header/>
+          <Header />
           <Router />
           <Footer/>
         </ErrorBoundary>
