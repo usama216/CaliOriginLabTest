@@ -6,6 +6,10 @@ const Video = () => {
     const isLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
     const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+    const preventContextMenu = (event) => {
+      event.preventDefault();
+    };
   return (
    <>
    <Box sx={{padding:'0% 5%', position:'relative',
@@ -23,7 +27,7 @@ const Video = () => {
         overflow:'hidden', 
         width:'100%'
     }}>
-    <video width="100%" controls autoPlay muted>
+    <video width="100%"  autoPlay muted controlsList="nodownload"  onContextMenu={preventContextMenu}>
   <source src="vd.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>

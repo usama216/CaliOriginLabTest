@@ -76,7 +76,7 @@ const Hero = () => {
                   : isMediumScreen
                   ? "3rem"
                   : "4rem",
-                fontWeight: 600,
+                fontWeight: 700,
                 textTransform: "uppercase",
                 marginBottom: "-0.5rem",
               }}
@@ -91,7 +91,7 @@ const Hero = () => {
                   : isMediumScreen
                   ? "3rem"
                   : "4rem",
-                fontWeight: 600,
+                fontWeight: 700,
                 textTransform: "uppercase",
                 marginBottom: "2rem",
               }}
@@ -136,7 +136,7 @@ const Hero = () => {
               <img
                 src="/heroimg.png"
                 alt=""
-                width={isMediumScreen ? "50%" : isMediumScreen ? "60%" : "70%"}
+                width={isMediumScreen ? "50%" : isMediumScreen ? "60%" : "80%"}
               />
             </Box>
           </Box>
