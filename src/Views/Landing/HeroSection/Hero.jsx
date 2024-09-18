@@ -35,7 +35,7 @@ const Hero = () => {
         {/* <Slider {...settings}> */}
         <Box
           sx={{
-            backgroundImage: "url(herobg1.png)",
+            backgroundImage: "url(herobg1.webp)",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -134,7 +134,7 @@ const Hero = () => {
               }}
             >
               <img
-                src="/heroimg.png"
+                src="/heroimg.webp"
                 alt=""
                 width={isMediumScreen ? "50%" : isMediumScreen ? "60%" : "80%"}
               />

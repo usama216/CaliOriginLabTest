@@ -16,16 +16,16 @@ const ProductSample = () => {
   const is1200 = useMediaQuery("(max-width:1200px)");
 
   const listData = [
-    {img:'benefit1.png' , title :'Best Herbs',
+    {img:'benefit1.webp' , title :'Best Herbs',
         des:'Cali Origins only uses the finest organic herbs and extracts in our line of premium selection of CBD products '
     },
-    {img:'benefit2.png' , title :'Best Products',
+    {img:'benefit2.webp' , title :'Best Products',
         des:'Cali Origins has carefully crafted a variety of Hemp CBD products to choose from for daily wellness support.'
     },
-    {img:'benefit3.png' , title :'Good Quality',
+    {img:'benefit3.webp' , title :'Good Quality',
         des:'Our premier CBD products offer good quality and consistency you can always count on, each time you order.'
     },
-    {img:'benefit4.png' , title :'Best Price',
+    {img:'benefit4.webp' , title :'Best Price',
         des:'Cali Origins ensures top-notch CBD products at the best prices, staying true to our commitment to excellence.  '
     },
   ]

@@ -135,25 +135,33 @@ const Footer = () => {
         <br />
         <br />
         <Box
-          sx={{ display: "flex", alignItems: "center", width: "70%" }}
+          sx={{ display: "flex", alignItems: "center",
+            flexDirection:isSmallScreen ? "column": "row",
+            width:isMediumScreen ?"100%" : "70%" }}
           gap={2}
         >
           <TextField
-            // size="small"
+            size={isSmallScreen ? "small": 'medium'}
             sx={textFieldStyle}
             fullWidth
             placeholder="Input your email address here"
           />
-          <CustomButton
+         <Box sx={{
+          width:isSmallScreen ? '100%' :'auto'
+         }}>
+         <CustomButton
             name="View All"
             border={"1px solid #f0ab3b"}
             backgroundColor={"#f0ab3b"}
             color={"white"}
             hbackgroundColor={"transparent"}
             hcolor={"#f0ab3b"}
-            width={"14rem"}
+            width={isSmallScreen ? '100%': "12rem"}
+            mr={ '0.5rem'}
           />
+         </Box>
         </Box>
+
       </FlexBox>
       
       <Divider sx={{ backgroundColor: "gray", height:'0.01px',
@@ -192,38 +200,55 @@ const Footer = () => {
          margin:isSmallScreen ? "1rem 0rem": '2rem 0rem'
        }} />
 
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Typography sx={{ fontSize: "0.9rem", color: "white" }}>
-        Copyright © 2024 Cali Origins. All Rights Reserved.
-        </Typography>
+<Box
+  sx={{
+    width: '100%',
+    display: "flex",
+    justifyContent: 'space-between',
+    alignItems: "center", gap:"1rem"
+  }}
+>
+  {/* Left-side text */}
+  <Box sx={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    width: "auto",  // Allow the Box to take only as much space as needed
+  }}>
+    <Typography sx={{ fontSize: "0.9rem", color: "white" }}>
+      Copyright © 2024 Cali Origins. All Rights Reserved.
+    </Typography>
+  </Box>
 
-        <Box
-          sx={{ dispaly: "flex", alignItems: "center", justifyContent: "end" }}
-        >
-          <Image
-            src="/footercard1.svg"
-            width="13%"
-            sx={{ marginRight: "1rem" }}
-          />
-          <Image
-            src="/footercard2.svg"
-            width="13%"
-            sx={{ marginRight: "1rem" }}
-          />
-          <Image
-            src="/footercard3.svg"
-            width="13%"
-            sx={{ marginRight: "1rem" }}
-          />
-          <Image src="/footercard4.svg" width="13%" />
-        </Box>
-      </Box>
+  {/* Right-side images */}
+  <Box
+    sx={{
+      display: "flex",  // Enable flexbox behavior
+      alignItems: "center",
+      justifyContent: "flex-end",  // Align images to the right
+      gap:isSmallScreen ?  "0.5rem": "1rem",  // Add gap between images
+      width: "auto",  // Ensure Box only takes necessary space
+    }}
+  >
+    <Image
+      src="/footercard1.webp"
+      width={isSmallScreen ? "22rem" : "35rem"}
+    />
+    <Image
+      src="/footercard2.webp"
+      width={isSmallScreen ? "22rem" : "35rem"}
+    />
+    <Image
+      src="/footercard3.webp"
+      width={isSmallScreen ? "22rem" : "35rem"}
+    />
+    <Image
+      src="/footercard4.webp"
+      width={isSmallScreen ? "22rem" : "35rem"}
+    />
+  </Box>
+</Box>
+
     </StyledFooter>
   );
 };

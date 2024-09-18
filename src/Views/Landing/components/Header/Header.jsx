@@ -90,7 +90,7 @@ const handleHome = ()=>{
       <FlexBox sx={{ gap: "1rem" }}>
         <Box onClick={handleHome} sx={{cursor:'pointer'}}>
 
-        <Image src="/logo.png" width={'70%'} />
+        <Image src="/logo.webp" width={'70%'} />
         </Box>
 
       </FlexBox>

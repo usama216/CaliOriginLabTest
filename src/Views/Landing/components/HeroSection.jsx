@@ -9,7 +9,7 @@ const HeroSection = () => {
     <>
       <Box
         sx={{
-          backgroundImage: "url(LabTests.png)",
+          backgroundImage: "url(LabTests.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "none",

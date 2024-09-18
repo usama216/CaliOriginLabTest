@@ -23,12 +23,12 @@ const Video = () => {
     <Box sx={{
         display:'flex', justifyContent:'center',
         
-         borderRadius:'30px',
+         borderRadius:isSmallScreen ?  "20px": '30px',
         overflow:'hidden', 
         width:'100%'
     }}>
-    <video width="100%"  autoPlay muted controlsList="nodownload"  onContextMenu={preventContextMenu}>
-  <source src="vd.mp4" type="video/mp4" />
+    <video width="100%"  autoPlay muted controlsList="nodownload"  onContextMenu={preventContextMenu} preload='auto'>
+  <source src="cvd.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
     </Box>

@@ -9,6 +9,13 @@ const LabTestPDFMain = () => {
     { title: "Cheetah Piss", path: "Cheetah_Piss.pdf" },
     { title: "Grape Ape THCA", path: "Grape_Ape_THCA.pdf" },
     { title: "Blueberry OG", path: "Blueberry_OG.pdf" },
+    { title: "Super Lemon Haze", path: "Super_Lemon_Haze.pdf" },
+    { title: "Black Diamond", path: "Black_Diamond.pdf" },
+    { title: "Incredible Hulk", path: "Incredible_hulk.pdf" },
+    { title: "Pink Panties", path: "Pink_Panties.pdf" },
+    { title: "Skywalker OG", path: "Skywalker_OG.pdf" },
+    { title: "White Gusher", path: "White_Gusher.pdf" },
+    
   ];
 
   const handleViewPDF = (path) => {

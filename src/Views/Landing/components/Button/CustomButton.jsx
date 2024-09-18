@@ -2,7 +2,7 @@ import { Box, Typography, useTheme, useMediaQuery, Button as MuiButton, IconButt
 import React from 'react';
 import { FiArrowUpRight } from "react-icons/fi";
 
-const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor, name, width}) => {
+const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor, name, width,mr}) => {
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
     const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -14,10 +14,11 @@ const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor,
                 width:`${width}`,
                 textTransform: 'none',
                 backgroundColor: `${backgroundColor}`,
-                padding: isSmallScreen ? "0.3rem 0.8rem" : '0.5rem 2rem',
+                padding: isSmallScreen ? "0.1rem 0.8rem" : '0.5rem 2rem',
                 borderRadius: '50px',
                 display: 'flex',
                 alignItems: 'center', 
+                justifyContent:'center',
                 border: `${border}`,
                 '&:hover':{
                     backgroundColor: `${hbackgroundColor}`,
@@ -32,11 +33,13 @@ const CustomButton = ({border, backgroundColor, color, hcolor, hbackgroundColor,
                     fontSize: isSmallScreen ? "0.9rem" : '1rem',
                     fontWeight: 600,
                     textTransform: 'capitalize',
-                    marginRight: '0.5rem'
+                    marginRight:isSmallScreen ? "0rem": '0.5rem'
                 }}>
                     {name}
                 </Typography>
                 <IconButton  className='icon' sx={{fontSize:isSmallScreen? '1.1rem': '1.4rem',
+                //  display:'block',
+                marginRight:isSmallScreen ? "-0.5rem": "-0.5rem",
                      color: `${color}`, backgroundColor:'transparent'}}>
                 <FiArrowUpRight style={{backgroundColor:'transparent'}} />
                 </IconButton>
