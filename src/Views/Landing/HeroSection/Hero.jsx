@@ -35,7 +35,7 @@ const Hero = () => {
         {/* <Slider {...settings}> */}
         <Box
           sx={{
-            backgroundImage:isSmallScreen ? "url(calismall.png)": "url(herobg1.webp)",
+            backgroundImage:isSmallScreen ? "url(calismall.webp)": "url(herobg1.webp)",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
