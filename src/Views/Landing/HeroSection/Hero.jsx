@@ -35,7 +35,7 @@ const Hero = () => {
         {/* <Slider {...settings}> */}
         <Box
           sx={{
-            backgroundImage: "url(herobg1.webp)",
+            backgroundImage:isSmallScreen ? "url(calismall.png)": "url(herobg1.webp)",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -109,7 +109,7 @@ const Hero = () => {
                 fontWeight: 400,
                 textTransform: "capitalize",
                 marginBottom: "2rem",
-                width: isSmallScreen ? "100%" : isMediumScreen ? "80%" : "65%",
+                width: isSmallScreen ? "65%" : isMediumScreen ? "80%" : "65%",
               }}
             >
              Cali Origins CBD products' carefully crafted of formulations combine hemp and natural herbs for a balanced approach to your health.
