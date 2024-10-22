@@ -3,6 +3,25 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 
 const LabTestPDFMain = () => {
   const pdfs = [
+    { title: "Jet Fuel THCA Preroll", path: "/lab/Jet_Fuel_THCA_Preroll.pdf" },
+    { title: "Jet Fuel pre Roll", path: "/lab/Jet_Fuel_pre_Roll.pdf" },
+    { title: "Afghan kush Moon Rockets", path: "/lab/Afghan_kush_Moon_Rockets.pdf" },
+    { title: "AK 47 Moon Rockets", path: "/lab/AK_47_Moon_Rockets.pdf" },
+    { title: "Apple Firtter Moon Rockets", path: "/lab/Apple_Firtter_Moon_Rockets.pdf" },
+    { title: "Blueberry Pre Roll", path: "/lab/Blueberry_Pre_Roll.pdf" },
+    { title: "Hush Burger", path: "/lab/Hush_Burger.pdf" },
+    { title: "Incredible Hulk Pre roll", path: "/lab/Incredible_Hulk_Pre_roll.pdf" },
+    { title: "Juliue Ceasa Pre Roll", path: "/lab/Juliue_Ceasa_Pre_Roll.pdf" },
+    { title: "Maui Wowie Moon Rockets", path: "/lab/Maui_Wowie_Moon_Rockets.pdf" },
+    { title: "Nerds Pre Roll", path: "/lab/Nerds_Pre_Roll.pdf" },
+    { title: "Night Fire", path: "/lab/Night_Fire.pdf" },
+    { title: "Northern light Moon Rockets", path: "/lab/Northern_light_Moonn_Rockets.pdf" },
+    { title: "APie Face Pre Roll", path: "/lab/Pie_Face_Pre_Roll.pdf" },
+    { title: "Pineapple Moon Rockets", path: "/lab/Pineapple_Express_Moon_Rockets.pdf" },
+    { title: "Rainbow Runtz Pre Roll", path: "/lab/Rainbow_Runtz_Pre_Roll.pdf" },
+    { title: "TK Lotto Pre Roll", path: "/lab/TK_Lotto_Pre_Roll.pdf" },
+
+
     { title: "Night Fire OG", path: "NightFireOG.pdf" },
     { title: "Mendo Breath THCA", path: "Mendo_Breath_THCA.pdf" },
     { title: "Cherry Cake", path: "Cherry_Cake.pdf" },
