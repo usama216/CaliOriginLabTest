@@ -25,7 +25,9 @@ const LabTestPDFMain = () => {
 
 
 
-    { title: "TK Lotto Pre Roll", path: "/lab/TK_Lotto_Pre_Roll.pdf" },
+    { title: "TK41", path: "/lab/TK_Lotto_Pre_Roll.pdf" },
+    { title: "Gumbo", path: "/lab/Gumbo.pdf" },
+
     // { title: "Tropicanna Cherry", path: "/lab/Tropicanna_Cherry.pdf" },
     { title: "Cherry Cake", path: "Cherry_Cake.pdf" },
     { title: "THCA Disposable Vape", path: "/lab/THCA_Disposable_Vape.pdf" },
